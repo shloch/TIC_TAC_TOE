@@ -16,3 +16,11 @@ div.splash {
     color:green;
     margin: auto;
 }
+
+.shade {
+    position: absolute;
+    width: 450px;
+    height: 230px;
+    margin: 0 auto;
+    left: 455px;
+}

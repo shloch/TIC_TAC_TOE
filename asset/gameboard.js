@@ -8,6 +8,7 @@ var GameModule = (function() {
         if (isWinner) {
             mod.alert(`GAME OVER !!! --- ${player.getName()} WON`);
             document.querySelector(".splash").innerHTML = `${player.getName()} WON`;
+            document.querySelector('div').classList.add('shade')
         } else if (gameboard.length == 9) {
             mod.alert('GAME OVER !!! --- DRAW GAME');
         };
