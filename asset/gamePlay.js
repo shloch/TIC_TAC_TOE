@@ -2,10 +2,16 @@
 
 const playerFactory = (name, playLetter = "X") => {
     const cellpositions = [];
+
+    const getName = () => name;
+    const getPlayLetter  = () => playLetter;
+    const getCellPositions = () => cellpositions;
+    
+   
     const playPositions = (position) =>{
         cellpositions.push(position)
     };
-    return { name, cellpositions, playPositions, playLetter };
+    return { getName, getPlayLetter, playPositions, getCellPositions};
 };
 
 const startgame = document.querySelector("form");
