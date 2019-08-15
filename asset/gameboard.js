@@ -4,17 +4,20 @@ var GameModule = (function() {
     let gameboard = [];
 
     
-    let verifyGameWinner = function(isWinner, player) {
+    let verifyGameWinner = function(isWinner, player, event) {
         if (isWinner) {
-            alert(`GAME OVER !!! --- ${player.getName().toUpperCase()} WON`);
+            mod.alert(`GAME OVER !!! --- ${player.getName()} WON`);
         } else if (gameboard.length == 9) {
-            alert('GAME OVER !!! --- DRAW GAME');
+            mod.alert('GAME OVER !!! --- DRAW GAME');
         };
     }
 
     
     let mod = {};
-
+    mod.alert = function(message) {
+        let alertBox = document.querySelector("span")
+        alertBox.innerHTML = message;
+    }
     mod.displayController = function() {
         let tbl_text = `<tbody>
                         <tr>
@@ -36,7 +39,12 @@ var GameModule = (function() {
         let tbl = document.querySelector("table")
         tbl.innerHTML = tbl_text;
     };
-
+    let removeEvent = function(event) {   
+        const cells = document.querySelectorAll("td")
+        cells.forEach((cell, index, cells) => {
+            cell.removeEventListener("mouseover", event => {})
+            })        
+    }
 
     mod.startGame = function(player1, player2) {
         const cells = document.querySelectorAll("td")
@@ -46,17 +54,19 @@ var GameModule = (function() {
                 if (!gameboard.includes(index)){
                     if (x % 2 === 0)
                     {
+                        this.alert(`It is ${player1.getName()} turn!`);
                         let win = player2.chooseCell(cell, index);
                         x += 1;
                         gameboard.push(index)               
-                        verifyGameWinner(win, player2);
+                        verifyGameWinner(win, player2, event);
                     }
                     else
                     {
+                        this.alert(`It is ${player2.getName()} turn!`);
                         let win = player1.chooseCell(cell, index);
                         x += 1;
                         gameboard.push(index)
-                        verifyGameWinner(win, player1);
+                        verifyGameWinner(win, player1, event);
                     }    
                 }
             }, false)

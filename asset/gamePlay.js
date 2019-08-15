@@ -3,7 +3,7 @@
 const playerFactory = (name, playLetter = "X") => {
     const cellpositions = [];
 
-    const getName = () => name;
+    const getName = () => name.toUpperCase();
     const getPlayLetter  = () => playLetter;
     const getCellPositions = () => cellpositions;
     
@@ -61,5 +61,6 @@ startgame.addEventListener("submit", e => {
     Game.displayController();
 
    Game.startGame(player1, player2);
+   Game.alert(`It is ${player1.getName()} turn!`);
     e.preventDefault();
 });
