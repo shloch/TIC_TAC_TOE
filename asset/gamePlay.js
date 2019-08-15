@@ -32,17 +32,22 @@ const playerFactory = (name, playLetter = "X") => {
         for (let win of winner_formulas) { 
             let count = 0;
             let win_chars = win.split('');
+            let winningTableCells = [];
            for (let x of win_chars) {
-                let winningCell = [];
+                
                 if (cellpositions.includes(x)) {
-                    winningCell.push(x);
+                    winningTableCells.push(x);
+                    console.log('winning Table Cells = '+ winningTableCells);
                     count = count + 1;
                 };
+                
                 if (count == 3) {
-                    for(let cell of winningCell){
+                    for(let cell of winningTableCells){
+                        console.log("cell ="+ cell);
                         document.getElementById(cell).style =  'color: red;';
                     }
                     return  true;
+                    
                 };
             };
 
