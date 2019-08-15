@@ -33,10 +33,15 @@ const playerFactory = (name, playLetter = "X") => {
             let count = 0;
             let win_chars = win.split('');
            for (let x of win_chars) {
+                let winningCell = [];
                 if (cellpositions.includes(x)) {
+                    winningCell.push(x);
                     count = count + 1;
                 };
                 if (count == 3) {
+                    for(let cell of winningCell){
+                        document.getElementById(cell).style =  'color: red;';
+                    }
                     return  true;
                 };
             };

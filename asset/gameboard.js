@@ -4,7 +4,7 @@ var GameModule = (function() {
     let gameboard = [];
 
     
-    let verifyGameWinner = function(isWinner, player, event) {
+    let verifyGameWinner = function(isWinner, player) {
         if (isWinner) {
             mod.alert(`GAME OVER !!! --- ${player.getName()} WON`);
         } else if (gameboard.length == 9) {
@@ -21,19 +21,19 @@ var GameModule = (function() {
     mod.displayController = function() {
         let tbl_text = `<tbody>
                         <tr>
-                            <td id="one" data-value="1"></td>
-                            <td id="two" data-value="2"></td>
-                            <td id="three" data-value="3"></td>
+                            <td id="0" data-value="1"></td>
+                            <td id="1" data-value="2"></td>
+                            <td id="2" data-value="3"></td>
                         </tr>
                         <tr>
-                            <td id="four" data-value="4"></td>
-                            <td id="five" data-value="5"></td>
-                            <td id="six" data-value="6"></td>
+                            <td id="3" data-value="4"></td>
+                            <td id="4" data-value="5"></td>
+                            <td id="5" data-value="6"></td>
                         </tr>
                         <tr>
-                            <td id="seven" data-value="7"></td>
-                            <td id="eight" data-value="8"></td>
-                            <td id="nine" data-value="9"></td>
+                            <td id="6" data-value="7"></td>
+                            <td id="7" data-value="8"></td>
+                            <td id="8" data-value="9"></td>
                         </tr>
                     </tbody>`;
         let tbl = document.querySelector("table")
@@ -49,8 +49,8 @@ var GameModule = (function() {
     mod.startGame = function(player1, player2) {
         const cells = document.querySelectorAll("td")
         let x = 1;
-        cells.forEach((cell, index, cells) => {
-            cell.addEventListener('click', event => {       
+        cells.forEach((cell, index) => {
+            cell.addEventListener('click', () => {       
                 if (!gameboard.includes(index)){
                     if (x % 2 === 0)
                     {
@@ -58,15 +58,15 @@ var GameModule = (function() {
                         let win = player2.chooseCell(cell, index);
                         x += 1;
                         gameboard.push(index)               
-                        verifyGameWinner(win, player2, event);
+                        verifyGameWinner(win, player2);
                     }
                     else
                     {
                         this.alert(`It is ${player2.getName()} turn!`);
-                        let win = player1.chooseCell(cell, index);
+                        let win = player1.chooseCell(cell, index);                    
                         x += 1;
                         gameboard.push(index)
-                        verifyGameWinner(win, player1, event);
+                        verifyGameWinner(win, player1);
                     }    
                 }
             }, false)
