@@ -7,6 +7,7 @@ var GameModule = (function() {
     let verifyGameWinner = function(isWinner, player) {
         if (isWinner) {
             mod.alert(`GAME OVER !!! --- ${player.getName()} WON`);
+            document.querySelector(".splash").innerHTML = `${player.getName()} WON`;
         } else if (gameboard.length == 9) {
             mod.alert('GAME OVER !!! --- DRAW GAME');
         };

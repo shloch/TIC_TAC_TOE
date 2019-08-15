@@ -1,5 +1,18 @@
 table tr td {
     border: 1px solid black;
-    height: 150px;
-    width: 250px;
+    height: 70px;
+    width: 150px;
+}
+
+body {
+    text-align: center;
+}
+
+body table {
+    margin: auto;
+}
+
+div.splash {
+    color:green;
+    margin: auto;
 }
