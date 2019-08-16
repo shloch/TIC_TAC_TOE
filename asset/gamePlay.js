@@ -69,7 +69,7 @@ startgame.addEventListener("submit", e => {
 
     let Game = GameModule;
     Game.displayController();
-
+    document.querySelector('form #button').innerHTML = "<button onclick='window.location.reload();'>Reset Game</button>"
    Game.startGame(player1, player2);
    Game.alert(`It is ${player1.getName()} turn!`);
     e.preventDefault();
