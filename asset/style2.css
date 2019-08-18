@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css?family=Luckiest+Guy");
+@import url('https://fonts.googleapis.com/css?family=Zhi+Mang+Xing&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    max-width: 100%;
+    max-height: 100%;
+    background-color: skyblue;
+    background-image: -webkit-linear-gradient(90deg, skyblue 0%, steelblue 100%);
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    overflow: hidden;
+    font-family: "Luckiest Guy", cursive;
+    -webkit-font-smoothing: antialiased;
+}
+
+#container {
+    margin: 2% 10% 0% 10%;
+    padding: 0;
+    border: 1px solid #1818e980;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 5px 5px 2px 1px gray;
+}
+
+form {
+    margin: 5% 0 0 0;
+}
+
+table tr td {
+    background-color: white;
+    border: 1px solid #D6A7CF;
+    height: 70px;
+    width: 150px;
+}
+
+td {
+    box-shadow: 5px 5px 5px #D6A7CF;
+    border-radius: 5px;
+}
+
+td:hover {
+    background-color: #EDEBF9;
+    cursor: row-resize;
+}
+
+body table {
+    margin: auto;
+}
+
+div.splash {
+    color: black;
+    margin: auto;
+    font-size: 2em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 500;
+    animation: blinker 1s linear infinite;
+}
+
+.shade {
+    position: absolute;
+    width: 450px;
+    height: 230px;
+    margin: 0 auto;
+    left: 455px;
+}
+
+h1 {
+    color: olive;
+    margin: auto;
+    font-size: 2.1em;
+    font-weight: 900;
+}
+
+button {
+    border-radius: 5px 5px 5px 5px;
+    padding: 7px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(89, 114, 223)
+}
+
+input {
+    border-radius: 5px 5px 5px 5px;
+    padding: 5px;
+}
+
+#animate {
+    margin-top: 5%;
+}
+
+h2 {
+    cursor: pointer;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 80%;
+    height: 50px;
+    margin: auto;
+    display: block;
+    text-align: center;
+    font-family: 'Shojumaru', cursive;
+}
+
+h2 code {
+    position: relative;
+    top: 20px;
+    display: inline-block;
+    -webkit-animation: bounce 0.3s ease infinite alternate;
+    font-size: 55px;
+    font-family: 'Shojumaru', cursive;
+    color: #fff;
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc, 0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent, 0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+h2 code:nth-child(1) {
+    -webkit-animation-delay: 0.1s;
+}
+
+h2 code:nth-child(2) {
+    -webkit-animation-delay: 0.1s;
+}
+
+h2 code:nth-child(3) {
+    -webkit-animation-delay: 0.1s;
+}
+
+h2 code:nth-child(4) {
+    -webkit-animation-delay: 0.3s;
+}
+
+h2 code:nth-child(5) {
+    -webkit-animation-delay: 0.3s;
+}
+
+h2 code:nth-child(6) {
+    -webkit-animation-delay: 0.3s;
+}
+
+h2 code:nth-child(7) {
+    -webkit-animation-delay: 0.6s;
+}
+
+h2 code:nth-child(8) {
+    -webkit-animation-delay: 0.6s;
+}
+
+h2 code:nth-child(9) {
+    -webkit-animation-delay: 0.6s;
+}
+
+h2 code:nth-child(10) {
+    -webkit-animation-delay: 0.4s;
+}
+
+h2 code:nth-child(11) {
+    -webkit-animation-delay: 0.4s;
+}
+
+h2 code:nth-child(12) {
+    -webkit-animation-delay: 0.4s;
+}
+
+h2 code:nth-child(13) {
+    -webkit-animation-delay: 0.4s;
+}
+
+h2 code:nth-child(14) {
+    -webkit-animation-delay: 0.8s;
+}
+
+
+/* ANIMATION */
+
+@-webkit-keyframes bounce {
+    100% {
+        top: -20px;
+        text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc, 0 5px 0 #ccc, 0 6px 0 #ccc, 0 7px 0 #ccc, 0 8px 0 #ccc, 0 9px 0 #ccc, 0 50px 25px rgba(0, 0, 0, 0.2);
+    }
+}
+
+span {
+    color: #D6A7CF;
+    font-weight: bold;
+    font-family: Montez;
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+@media only screen and (max-width: 681px) {
+    #container {
+        margin: 3%;
+        padding: 5%;
+    }
+    h2 code {
+        font-size: 28px;
+        margin-top: 10%;
+    }
+    div.splash {
+        font-size: 1em;
+    }
+    span {
+        font-size: 1em;
+    }
+    .shade {
+        position: absolute;
+        width: 200px;
+        height: 90px;
+        margin: 0 auto;
+        left: 200px;
+    }
+}

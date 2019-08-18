@@ -3,7 +3,7 @@
 var GameModule = (function() {
     let gameboard = [];
 
-    
+
     let verifyGameWinner = function(isWinner, player) {
         if (isWinner) {
             mod.alert(`GAME OVER !!! --- ${player.getName()} WON`);
@@ -14,7 +14,7 @@ var GameModule = (function() {
         };
     }
 
-    
+
     let mod = {};
     mod.alert = function(message) {
         let alertBox = document.querySelector("span")
@@ -41,40 +41,38 @@ var GameModule = (function() {
         let tbl = document.querySelector("table")
         tbl.innerHTML = tbl_text;
     };
-    let removeEvent = function(event) {   
+    let removeEvent = function(event) {
         const cells = document.querySelectorAll("td")
         cells.forEach((cell, index, cells) => {
             cell.removeEventListener("mouseover", event => {})
-            })        
+        })
     }
 
     mod.startGame = function(player1, player2) {
         const cells = document.querySelectorAll("td")
         let x = 1;
         cells.forEach((cell, index) => {
-            cell.addEventListener('click', () => {       
-                if (!gameboard.includes(index)){
-                    if (x % 2 === 0)
-                    {
+            cell.addEventListener('click', () => {
+                cell.style = 'color: #8887A2; font-family: Monoton; font-size:40px;';
+                if (!gameboard.includes(index)) {
+                    if (x % 2 === 0) {
                         this.alert(`It is ${player1.getName()} turn!`);
                         let win = player2.chooseCell(cell, index);
                         x += 1;
-                        gameboard.push(index)               
+                        gameboard.push(index)
                         verifyGameWinner(win, player2);
-                    }
-                    else
-                    {
+                    } else {
                         this.alert(`It is ${player2.getName()} turn!`);
-                        let win = player1.chooseCell(cell, index);                    
+                        let win = player1.chooseCell(cell, index);
                         x += 1;
                         gameboard.push(index)
                         verifyGameWinner(win, player1);
-                    }    
+                    }
                 }
             }, false)
         })
     };
 
-    mod.displayGameOver = function() {};    
+    mod.displayGameOver = function() {};
     return mod;
 })();
