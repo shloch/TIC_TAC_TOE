@@ -1,0 +1,38 @@
+table tr td {
+    border: 1px solid black;
+    height: 70px;
+    width: 150px;
+}
+
+body {
+    text-align: center;
+}
+
+body table {
+    margin: auto;
+}
+
+div.splash{
+    color:green;
+    margin: auto;
+    font-size: 1.4em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 500;
+
+}
+
+.shade {
+    position: absolute;
+    width: 450px;
+    height: 230px;
+    margin: 0 auto;
+    left: 455px;
+}
+
+h1 {
+    color:green;
+    margin: auto;
+    font-size: 2.1em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 900;
+}
