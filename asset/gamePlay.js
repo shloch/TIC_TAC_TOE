@@ -37,7 +37,6 @@ const playerFactory = (name, playLetter = "X") => {
 
                 if (cellpositions.includes(x)) {
                     winningTableCells.push(x);
-                    console.log('winning Table Cells = ' + winningTableCells);
                     count = count + 1;
                 };
 
