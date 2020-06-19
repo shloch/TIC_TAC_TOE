@@ -2,7 +2,7 @@
 
 Building a Tic tac toe game with Javascript
 
-![alt text](https://github.com/shloch/TIC_TAC_TOE/blob/development/asset/tictac.gif)
+![alt text](https://github.com/shloch/TIC_TAC_TOE/blob/master/asset/tictac.gif)
 
 ## Live demo
 
