@@ -9,6 +9,11 @@ Building a Tic tac toe game with Javascript
 https://raw.githack.com/shloch/TIC_TAC_TOE/development/index.html
 
 
+## Future features
+- Adding sound effects upon clicks
+- Keep scores of different rounds of each player
+
+
 ## Contributors
 
 ### 👤 **SHEY Louis CHIA**
