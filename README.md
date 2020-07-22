@@ -11,7 +11,7 @@ https://raw.githack.com/shloch/TIC_TAC_TOE/development/index.html
 
 ## Future features
 - Adding sound effects upon clicks
-- Keep scores of different rounds of each player
+- Keep track of each player's scores over multiple rounds
 
 
 ## Contributors
