@@ -25,3 +25,8 @@ https://raw.githack.com/shloch/TIC_TAC_TOE/development/index.html
 
 ## 👤 **Terver Aosu**
 - Terver Aosu _https://github.com/truetechcode_
+
+## Acknowledgements
+- https://fonts.googleapis.com
+- https://www.theodinproject.com/
+- https://javascript.info/
